@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('jenis_kendaraan', 20);
             $table->string('warna', 20);
             $table->string('pemilik', 100);
-            $table->foreignId('id_user')->constrained('users');
+            $table->foreignId('id_user')->constrained('users', 'id_user');
             $table->timestamps();
         });
     }

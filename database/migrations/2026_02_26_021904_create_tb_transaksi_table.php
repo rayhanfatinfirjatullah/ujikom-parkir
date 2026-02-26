@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('durasi_jam')->nullable(); // int(5) [cite: 47]
             $table->decimal('biaya_total', 10, 0)->default(0); // decimal(10,0) [cite: 49]
             $table->enum('status', ['masuk', 'keluar', '']); // enum [cite: 50]
-            $table->foreignId('id_user')->constrained('users'); // int(11) 
+            $table->foreignId('id_user')->constrained('users', 'id_user');
             $table->foreignId('id_area')->constrained('tb_area_parkir', 'id_area'); // int(11) [cite: 52]
             $table->timestamps();
         });

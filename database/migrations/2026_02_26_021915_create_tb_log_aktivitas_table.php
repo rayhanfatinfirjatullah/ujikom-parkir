@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('tb_log_aktivitas', function (Blueprint $table) {
             $table->id('id_log');
-            $table->foreignId('id_user')->constrained('users');
+            $table->foreignId('id_user')->constrained('users', 'id_user');
             $table->string('aktivitas', 100);
             $table->dateTime('waktu_aktivitas');
         });
